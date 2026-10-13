@@ -1,0 +1,36 @@
+[project]
+name = "polytope_cooling"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Rose Goullet",email = "git@bunnyro.se"}
+]
+readme = "README.md"
+requires-python = "~=3.14"
+dependencies = [
+    "numpy ~=2.4",
+]
+
+[dependency-groups]
+test = [
+    "ipykernel ~=7.3",
+    "joblib ~=1.5.3",
+    "tqdm ~=4.68",
+    "matplotlib ~=3.11",
+    "scipy ~=1.18.0",
+]
+
+dev = [
+    "scipy-stubs ~=1.18.0", #must be same version as scipy
+]
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.group.dev]
+optional = true
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
